@@ -17,8 +17,8 @@ public class MainClass {
         }
         try {
             cyclicBarrier.await();
-            cyclicBarrier.reset();
             System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
+            cyclicBarrier.await();
             cyclicBarrier.await();
             System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
         } catch (InterruptedException e) {
